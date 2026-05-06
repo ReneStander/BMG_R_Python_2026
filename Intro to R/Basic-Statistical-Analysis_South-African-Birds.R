@@ -55,6 +55,12 @@ t.test(birds$Weight,
        alternative = "greater",
        mu = 1)
 
+# Apply logarithmic transformations to the size
+# and to the weight of the birds.
+
+birds$logSize <- log(birds$Size)
+birds$logWeight <- log(birds$Weight)
+
 # Test whether the mean log-transformed size of the
 # birds is significantly different from 4.5.
 
@@ -117,7 +123,7 @@ birds$logWeight
 
 lrm$fitted.values
 
-# For the blue crane:
+# For the arctic tern:
 
 which(birds$Animal == "Arctic tern")
 
